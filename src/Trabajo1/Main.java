@@ -2,22 +2,21 @@ package Trabajo1;
 
 public class Main {
 
-    public static int exercise_2_c(int n) {  //termino enesisimo de fibonacci
-        int serie = 10, num1 = 0, num2 = 1, suma = 0;
+    public static boolean exercise_4(int[] array) {
+        int size = array.length - 1; //recorre de atras para adelante
 
-        for (int i = 1; i < n; i++) {
-
-            //primero sumamos
-            suma = num1 + num2;
-            //Despues, cambiamos la segunda variable por la primera
-            num1 = num2;
-            //Por ultimo, cambiamos la suma por la segunda variable
-            num2 = suma;
+        for (int i = 0; i < array.length / 2; i++) {
+            if (array[i] != array[size]) {
+                return false;
+            }
+            size--;
         }
-        return suma;
+        return true;
     }
 
+
     public static void main(String[] args) {
-        System.out.println(exercise_2_c(4));
+        int[] array = {1, 0, 6, 6, 0, 1};
+        System.out.println(Main.exercise_4(array));
     }
 }
