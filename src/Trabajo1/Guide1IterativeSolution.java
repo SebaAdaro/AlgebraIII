@@ -28,7 +28,7 @@ public class Guide1IterativeSolution implements Guide1 {
 
     @Override
     public boolean exercise_4(int[] array) {
-        int size = array.length - 1; //recorre de atras para adelante
+        int size = array.length - 1; //recorre el arreglo de atras para adelante
 
         for (int i = 0; i < array.length / 2; i++) {
             if (array[i] != array[size]) {
@@ -41,6 +41,7 @@ public class Guide1IterativeSolution implements Guide1 {
 
     @Override
     public int exercise_6_b_iii(int n) {
+
         return 0;
     }
 
