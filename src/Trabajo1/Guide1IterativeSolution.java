@@ -41,7 +41,9 @@ public class Guide1IterativeSolution implements Guide1 {
 
     @Override
     public int exercise_6_b_iii(int n) {
+        for (int i = 0; i <n; i++) {
 
+        }
         return 0;
     }
 
