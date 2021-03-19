@@ -16,7 +16,6 @@ public class Guide1IterativeSolution implements Guide1 {
         int serie = 10, num1 = 0, num2 = 1, suma = 1;
 
         for (int i = 1; i < n; i++) {
-
             //primero sumamos
             sum = num1 + num2;
             //Despues, cambiamos la segunda variable por la primera
