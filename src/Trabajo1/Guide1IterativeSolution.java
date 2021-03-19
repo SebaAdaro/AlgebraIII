@@ -32,7 +32,12 @@ public class Guide1IterativeSolution implements Guide1 {
 
     @Override
     public int exercise_6_b_iii(int n) {
-        return 0;
+        int counter = 0;
+        for (int i = 2; i < n; i++) {
+            if ((n%i) != 0  ){
+                counter++;
+            }
+        }return counter;
     }
 
     @Override
