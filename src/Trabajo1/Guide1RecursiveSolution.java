@@ -8,11 +8,8 @@ public class Guide1RecursiveSolution implements Guide1 {
 
     @Override
     public int exercise_2_c(int n) {
-        return 0;
-    }
-    int fibonacci(int n) {
         if (n > 1) {
-            return fibonacci(n - 1) + fibonacci(n - 2);  //función recursiva
+            return exercise_2_c(n - 1) + exercise_2_c(n - 2);  //función recursiva
         } else if (n == 1) {  // caso base
             return 1;
         } else if (n == 0) {  // caso base
