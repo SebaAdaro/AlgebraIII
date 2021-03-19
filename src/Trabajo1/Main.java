@@ -2,22 +2,24 @@ package Trabajo1;
 
 public class Main {
 
-    public static int exercise_2_c(int n) {  //termino enesisimo de fibonacci
-        int serie = 10, num1 = 0, num2 = 1, suma = 0;
-
-        for (int i = 1; i < n; i++) {
-
-            //primero sumamos
-            suma = num1 + num2;
-            //Despues, cambiamos la segunda variable por la primera
-            num1 = num2;
-            //Por ultimo, cambiamos la suma por la segunda variable
-            num2 = suma;
+    public static boolean exercise_4(int[] array) {  // 101 1221  11011
+        int size = array.length;
+        double middle = (int)size/2;
+        //Sea An = {a1, a2, ...,an}, verificar si el conjunto es capicúa, es decir a1 = an; a2 = an-1, etc
+        for (int i = 0; i < size; i++) {
+            if (i == middle){
+                break;
+            }
+            if (array[i] == array[size]){
+                size--;
+                return true;
+            }
         }
-        return suma;
+        return false;
     }
 
     public static void main(String[] args) {
-        System.out.println(exercise_2_c(4));
+        int[] array = {1,0,1};
+        System.out.println(exercise_4(array));
     }
 }
