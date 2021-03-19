@@ -1,9 +1,13 @@
 package Trabajo1;
 
-public class Guide1IterativeSolution implements Guide1{
+public class Guide1IterativeSolution implements Guide1 {
     @Override
     public int exercise_1_d(int n) {
-        return 0;
+        int number = 0;
+        for (int i = 1; i <= n; i++) {
+            number = (2 * i) - 1;
+        }
+        return number;
     }
 
     @Override
