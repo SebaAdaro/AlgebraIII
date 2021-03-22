@@ -41,14 +41,27 @@ public class Guide1IterativeSolution implements Guide1 {
 
     @Override
     public int exercise_6_b_iii(int n) {
-        for (int i = 0; i <n; i++) {
+        int counter = 0;
+        for(int i=2;i<n;i++){
+                while(n%i==0){
+                    n=n/i;
+                    counter++;
+                    if(n==1){
+                        System.exit(0);
+                    }
+                }
+            }return counter;
 
         }
-        return 0;
-    }
-
     @Override
     public int exercise_8(int[] coefs, int n) {
-        return 0;
+        int l = coefs.length;
+        int grado = coefs.length-1;
+        int[] coefs2 = new int[l];
+        coefs2[n] = coefs[n];
+        for (int i = n; i <=0 ; i--) {
+            coefs2[i] = coefs[i] + coefs2[i+1]*n;
+        }
+        return coefs2[0];
     }
 }
