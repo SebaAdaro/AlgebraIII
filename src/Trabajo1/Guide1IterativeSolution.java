@@ -22,16 +22,28 @@ public class Guide1IterativeSolution implements Guide1 {
             num1 = num2;
             //Por ultimo, cambiamos la suma por la segunda variable
             num2 = suma;
-        }return sum;
+        }
+        return sum;
     }
 
     @Override
     public boolean exercise_4(int[] array) {
-        return false;
+        int size = array.length - 1; //recorre el arreglo de atras para adelante
+
+        for (int i = 0; i < array.length / 2; i++) {
+            if (array[i] != array[size]) {
+                return false;
+            }
+            size--;
+        }
+        return true;
     }
 
     @Override
     public int exercise_6_b_iii(int n) {
+        for (int i = 0; i <n; i++) {
+
+        }
         return 0;
     }
 
