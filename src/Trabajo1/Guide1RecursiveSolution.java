@@ -1,5 +1,4 @@
 package Trabajo1;
-import java.util.*;
 
 public class Guide1RecursiveSolution implements Guide1 {
     @Override
@@ -26,6 +25,15 @@ public class Guide1RecursiveSolution implements Guide1 {
 
     @Override
     public boolean exercise_4(int[] array) {
+        if (array.length == 0 || array.length == 1) return true;
+        if (array.length == 2) if (array[0] == array[1]) return true;
+        if (array[0] == array[array.length - 1]) {
+            int[] newArray = new int[array.length - 2];
+            for (int i = 0; i < array.length - 2; i++) {
+                newArray[i] = array[i + 1];
+            }
+            return exercise_4(newArray);
+        }
         return false;
     }
 
